@@ -1,5 +1,6 @@
 import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/feature/forgot%20password/forgot_password_screen.dart';
+import 'package:finance_ui/feature/forgot%20password/otp_verification_screen.dart';
 import 'package:finance_ui/feature/login/login_screen.dart';
 import 'package:finance_ui/feature/register/register_screen.dart';
 import 'package:finance_ui/feature/welcome/welcome_screen.dart';
@@ -33,6 +34,32 @@ class AppRouter {
         path: AppRoutes.forgotPasswordScreen,
         name: AppRoutes.forgotPasswordScreen,
         builder: (context, state) => const ForgotPasswordScreen(),
+      ),
+      // GoRoute(
+      //   path: AppRoutes.otpVerificationScreen,
+      //   name: AppRoutes.otpVerificationScreen,
+      //   builder: (context, state) => const OtpVerificationScreen(),
+      // ),
+      GoRoute(
+        path: AppRoutes.otpVerificationScreen,
+        name: AppRoutes.otpVerificationScreen,
+        pageBuilder: (context, state) {
+          return CustomTransitionPage(
+            key: state.pageKey,
+            child: OtpVerificationScreen(),
+            transitionsBuilder: (
+              context,
+              animation,
+              secondaryAnimation,
+              child,
+            ) {
+              return FadeTransition(
+                opacity: CurveTween(curve: Curves.easeIn).animate(animation),
+                child: child,
+              );
+            },
+          );
+        },
       ),
     ],
   );
