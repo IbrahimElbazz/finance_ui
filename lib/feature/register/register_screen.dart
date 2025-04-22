@@ -1,6 +1,3 @@
-import 'dart:developer';
-
-import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/core/styling/app_colors.dart';
 import 'package:finance_ui/core/styling/app_style.dart';
 import 'package:finance_ui/core/widgets/custom_button.dart';
@@ -8,21 +5,18 @@ import 'package:finance_ui/core/widgets/custom_leading_pop.dart';
 import 'package:finance_ui/core/widgets/custom_text_field.dart';
 import 'package:finance_ui/feature/login/widgets/container_with_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-
 import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  bool isActive = false;
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,49 +32,30 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Welcome back! \n Again!', style: AppStyle.primaryW700S30),
+              Text(
+                'Hello! Register to get\n started',
+                style: AppStyle.primaryW700S30,
+              ),
               Gap(30),
-              CustomTextField(lable: 'Enter your email'),
-              Gap(15),
-              CustomTextField(
-                obscureText: !isActive,
-                lable: 'Enter your password',
-                icon: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      isActive = !isActive;
-                      log(isActive.toString());
-                    });
-                  },
-                  icon: SvgPicture.asset(
-                    'assets/svgs/eye.svg',
-                    fit: BoxFit.scaleDown,
-                    color: isActive ? AppColors.primary : null,
-                  ),
-                ),
-              ),
-              Gap(15),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    'Forgot password?',
-                    style: AppStyle.greyW500S16.copyWith(fontSize: 14.sp),
-                  ),
-                ],
-              ),
+              CustomTextField(lable: 'Username'),
+              Gap(12),
+              CustomTextField(lable: 'Email'),
+              Gap(12),
+              CustomTextField(lable: 'Password'),
+              Gap(12),
+              CustomTextField(lable: 'Confirm Password'),
               Gap(30),
               CustomButton(
                 onPressed: () {},
                 color: AppColors.primary,
-                child: Text('Login', style: AppStyle.whiteW600S15),
+                child: Text('Register', style: AppStyle.whiteW600S15),
               ),
               Gap(35),
               Row(
                 children: [
                   Container(width: 112.w, height: 1.h, color: AppColors.border),
                   Spacer(),
-                  Text('Or Login with', style: AppStyle.darkGreyW600S14),
+                  Text('Or Register with', style: AppStyle.darkGreyW600S14),
                   Spacer(),
                   Container(width: 112.w, height: 1.h, color: AppColors.border),
                 ],
@@ -94,23 +69,23 @@ class _LoginScreenState extends State<LoginScreen> {
                   ContainerWithImage(image: 'assets/svgs/apple.svg'),
                 ],
               ),
-              Gap(115),
+              Gap(54),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 spacing: 5.w,
                 children: [
                   Text(
-                    'Don’t have an account?',
+                    'Already have an account?',
                     style: AppStyle.greyW500S16.copyWith(
                       color: AppColors.primary,
                     ),
                   ),
                   GestureDetector(
                     onTap: () {
-                      context.pushNamed(AppRoutes.registerScreen);
+                      context.pop();
                     },
                     child: Text(
-                      'Register Now',
+                      ' Login Now',
                       style: AppStyle.greyW500S16.copyWith(
                         color: AppColors.primaryDark,
                       ),

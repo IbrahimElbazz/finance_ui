@@ -1,5 +1,6 @@
 import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/feature/login/login_screen.dart';
+import 'package:finance_ui/feature/register/register_screen.dart';
 import 'package:finance_ui/feature/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -21,6 +22,11 @@ class AppRouter {
         path: AppRoutes.loginScreen,
         name: AppRoutes.loginScreen,
         builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.registerScreen,
+        name: AppRoutes.registerScreen,
+        builder: (context, state) => const RegisterScreen(),
       ),
     ],
   );
