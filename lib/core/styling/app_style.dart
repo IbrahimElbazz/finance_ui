@@ -23,6 +23,12 @@ class AppStyle {
     color: AppColors.black,
     fontFamily: AppFonts.urbanist,
   );
+  static TextStyle darkGreyW600S14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.darkGrey,
+    fontFamily: AppFonts.urbanist,
+  );
   static TextStyle whiteW600S15 = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeight.w600,

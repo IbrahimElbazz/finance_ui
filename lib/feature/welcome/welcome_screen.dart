@@ -13,42 +13,44 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
 
-        children: [
-          Image.asset('assets/images/welcom.png'),
-          SizedBox(height: 20.h),
+          children: [
+            Image.asset('assets/images/welcom.png'),
+            SizedBox(height: 20.h),
 
-          CustomButton(
-            onPressed: () {
-              context.pushNamed(AppRoutes.loginScreen);
-            },
-            color: AppColors.primary,
-            child: Text('Login', style: AppStyle.whiteW600S15),
-          ),
-          SizedBox(height: 10.h),
-          CustomOutlineButton(
-            onPressed: () {},
-            color: AppColors.primary,
-            child: Text(
-              'Register',
-              style: AppStyle.primaryW700S30.copyWith(fontSize: 15.sp),
+            CustomButton(
+              onPressed: () {
+                context.pushNamed(AppRoutes.loginScreen);
+              },
+              color: AppColors.primary,
+              child: Text('Login', style: AppStyle.whiteW600S15),
             ),
-          ),
-          SizedBox(height: 50.h),
-          Text(
-            'Continue as a guest',
-            style: TextStyle(
-              fontSize: 15.sp,
-              color: AppColors.primaryDark,
-              fontWeight: FontWeight.w700,
-              decoration: TextDecoration.underline,
-              decorationColor: AppColors.primaryDark,
-              decorationThickness: 2,
+            SizedBox(height: 10.h),
+            CustomOutlineButton(
+              onPressed: () {},
+              color: AppColors.primary,
+              child: Text(
+                'Register',
+                style: AppStyle.primaryW700S30.copyWith(fontSize: 15.sp),
+              ),
             ),
-          ),
-        ],
+            SizedBox(height: 50.h),
+            Text(
+              'Continue as a guest',
+              style: TextStyle(
+                fontSize: 15.sp,
+                color: AppColors.primaryDark,
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.underline,
+                decorationColor: AppColors.primaryDark,
+                decorationThickness: 2,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
