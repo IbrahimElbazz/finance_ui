@@ -8,6 +8,7 @@ class AppTheme {
     fontFamily: AppFonts.urbanist,
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.white,
+
     dividerColor: Color(0xffE8ECF4),
     textTheme: TextTheme(
       labelLarge: AppStyle.primaryW700S30,

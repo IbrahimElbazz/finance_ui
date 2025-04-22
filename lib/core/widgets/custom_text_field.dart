@@ -26,18 +26,18 @@ class CustomTextField extends StatelessWidget {
 
         hintStyle: AppStyle.greyW500S16,
         suffixIcon: icon,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r)),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.r),
+          borderSide: const BorderSide(color: AppColors.grey),
+        ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
           borderSide: const BorderSide(color: AppColors.primary),
         ),
+
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: AppColors.primary),
-        ),
-        disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.r),
-          borderSide: const BorderSide(color: AppColors.primary),
+          borderSide: const BorderSide(color: AppColors.grey),
         ),
       ),
     );
