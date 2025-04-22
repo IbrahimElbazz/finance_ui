@@ -1,6 +1,6 @@
-import 'dart:ui';
 import 'package:finance_ui/core/styling/app_colors.dart';
 import 'package:finance_ui/core/styling/app_fonts.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppStyle {

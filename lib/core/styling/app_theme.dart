@@ -10,8 +10,8 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.white,
     dividerColor: AppColors.grey,
     textTheme: TextTheme(
-      labelLarge: AppStyle.primaryW700S30 as TextStyle,
-      labelMedium: AppStyle.greyW500S16 as TextStyle,
+      labelLarge: AppStyle.primaryW700S30,
+      labelMedium: AppStyle.greyW500S16,
     ),
     buttonTheme: ButtonThemeData(buttonColor: AppColors.primary),
   );
