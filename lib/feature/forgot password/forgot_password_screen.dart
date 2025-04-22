@@ -3,20 +3,19 @@ import 'package:finance_ui/core/styling/app_style.dart';
 import 'package:finance_ui/core/widgets/custom_button.dart';
 import 'package:finance_ui/core/widgets/custom_leading_pop.dart';
 import 'package:finance_ui/core/widgets/custom_text_field.dart';
-import 'package:finance_ui/feature/login/widgets/container_with_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+class ForgotPasswordScreen extends StatefulWidget {
+  const ForgotPasswordScreen({super.key});
 
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
+  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {
+class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,50 +31,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text('Forgot Password?', style: AppStyle.primaryW700S30),
+              Gap(10),
               Text(
-                'Hello! Register to get\n started',
-                style: AppStyle.primaryW700S30,
+                'Don\'t worry! It occurs. Please enter the email address linked with your account.',
+                style: AppStyle.greyW500S16,
               ),
-              Gap(30),
-              CustomTextField(lable: 'Username'),
-              Gap(12),
-              CustomTextField(lable: 'Email'),
-              Gap(12),
-              CustomTextField(lable: 'Password'),
-              Gap(12),
-              CustomTextField(lable: 'Confirm Password'),
-              Gap(30),
+              Gap(32),
+              CustomTextField(lable: 'Enter your email'),
+              Gap(38),
+
               CustomButton(
                 onPressed: () {},
                 color: AppColors.primary,
-                child: Text('Register', style: AppStyle.whiteW600S15),
+                child: Text('Send Code', style: AppStyle.whiteW600S15),
               ),
-              Gap(35),
-              Row(
-                children: [
-                  Container(width: 112.w, height: 1.h, color: AppColors.border),
-                  Spacer(),
-                  Text('Or Register with', style: AppStyle.darkGreyW600S14),
-                  Spacer(),
-                  Container(width: 112.w, height: 1.h, color: AppColors.border),
-                ],
-              ),
-              Gap(30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ContainerWithImage(image: 'assets/svgs/facebook.svg'),
-                  ContainerWithImage(image: 'assets/svgs/google_ic.svg'),
-                  ContainerWithImage(image: 'assets/svgs/apple.svg'),
-                ],
-              ),
-              Gap(43),
+
+              Gap(361),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 spacing: 5.w,
                 children: [
                   Text(
-                    'Already have an account?',
+                    'Remember Password?',
                     style: AppStyle.greyW500S16.copyWith(
                       color: AppColors.primary,
                     ),
@@ -85,7 +63,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       context.pop();
                     },
                     child: Text(
-                      ' Login Now',
+                      'Login',
                       style: AppStyle.greyW500S16.copyWith(
                         color: AppColors.primaryDark,
                       ),

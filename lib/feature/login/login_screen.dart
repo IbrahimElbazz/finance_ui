@@ -63,9 +63,14 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    'Forgot password?',
-                    style: AppStyle.greyW500S16.copyWith(fontSize: 14.sp),
+                  TextButton(
+                    onPressed: () {
+                      context.pushNamed(AppRoutes.forgotPasswordScreen);
+                    },
+                    child: Text(
+                      'Forgot password?',
+                      style: AppStyle.greyW500S16.copyWith(fontSize: 14.sp),
+                    ),
                   ),
                 ],
               ),
@@ -105,8 +110,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: AppColors.primary,
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
+                  TextButton(
+                    onPressed: () {
                       context.pushNamed(AppRoutes.registerScreen);
                     },
                     child: Text(
