@@ -41,7 +41,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
 
               CustomButton(
                 onPressed: () {
-                  context.pushNamed(AppRoutes.otpVerificationScreen);
+                  context.pushNamed(AppRoutes.passwordChangedScreen);
                 },
                 color: AppColors.primary,
                 child: Text('Reset Password', style: AppStyle.whiteW600S15),
