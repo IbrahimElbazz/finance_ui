@@ -4,14 +4,13 @@ import 'package:finance_ui/core/styling/app_style.dart';
 import 'package:finance_ui/core/widgets/custom_button.dart';
 import 'package:finance_ui/core/widgets/custom_leading_pop.dart';
 import 'package:finance_ui/core/widgets/custom_text_field.dart';
-import 'package:finance_ui/feature/forgot%20password/widgets/otp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-class OtpVerificationScreen extends StatelessWidget {
-  const OtpVerificationScreen({super.key});
+class CreateNewPasswordScreen extends StatelessWidget {
+  const CreateNewPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,29 +25,28 @@ class OtpVerificationScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 28.h),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Text('OTP Verification', style: AppStyle.primaryW700S30),
-                ],
-              ),
+              Text('Create new password', style: AppStyle.primaryW700S30),
               Gap(10),
               Text(
-                'Enter the verification code we just sent on your email address.',
+                'Your new password must be unique from those previously used.',
                 style: AppStyle.greyW500S16,
               ),
               Gap(32),
-              PinputExample(),
+              CustomTextField(lable: 'New Password'),
+              Gap(16),
+              CustomTextField(lable: 'Confirm Password'),
               Gap(38),
 
               CustomButton(
                 onPressed: () {
-                  context.pushNamed(AppRoutes.createNewPasswordScreen);
+                  context.pushNamed(AppRoutes.otpVerificationScreen);
                 },
                 color: AppColors.primary,
-                child: Text('Verify', style: AppStyle.whiteW600S15),
+                child: Text('Reset Password', style: AppStyle.whiteW600S15),
               ),
+
               Gap(361),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -61,9 +59,11 @@ class OtpVerificationScreen extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pop();
+                    },
                     child: Text(
-                      'Resend',
+                      'Login',
                       style: AppStyle.greyW500S16.copyWith(
                         color: AppColors.primaryDark,
                       ),
