@@ -23,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
 
             CustomButton(
               onPressed: () {
-                context.pushNamed(AppRoutes.loginScreen);
+                context.pushNamed(AppRoutes.appNavigation);
               },
               color: AppColors.primary,
               child: Text('Login', style: AppStyle.whiteW600S15),

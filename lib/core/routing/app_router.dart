@@ -1,8 +1,10 @@
+import 'package:finance_ui/core/navigation/app_navigation.dart';
 import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/feature/forgot%20password/create_new_password_screen.dart';
 import 'package:finance_ui/feature/forgot%20password/forgot_password_screen.dart';
 import 'package:finance_ui/feature/forgot%20password/otp_verification_screen.dart';
 import 'package:finance_ui/feature/forgot%20password/password_changed_screen.dart';
+import 'package:finance_ui/feature/home/home_screen.dart';
 import 'package:finance_ui/feature/login/login_screen.dart';
 import 'package:finance_ui/feature/register/register_screen.dart';
 import 'package:finance_ui/feature/welcome/welcome_screen.dart';
@@ -52,6 +54,16 @@ class AppRouter {
         path: AppRoutes.passwordChangedScreen,
         name: AppRoutes.passwordChangedScreen,
         builder: (context, state) => const PasswordChangedScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.appNavigation,
+        name: AppRoutes.appNavigation,
+        builder: (context, state) => const AppNavigation(),
+      ),
+      GoRoute(
+        path: AppRoutes.homeScreen,
+        name: AppRoutes.homeScreen,
+        builder: (context, state) => const HomeScreen(),
       ),
     ],
   );
