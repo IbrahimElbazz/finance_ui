@@ -81,7 +81,7 @@ class CardVisa extends StatelessWidget {
                         color: Color(0xffFDFDFD),
                       ),
                     ),
-                    Gap(41),
+                    Spacer(),
                     Text(
                       date,
                       style: TextStyle(
