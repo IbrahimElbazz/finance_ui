@@ -62,6 +62,8 @@ class _SliderCardsState extends State<SliderCards> {
 
         DotsIndicator(
           dotsCount: 3,
+          animate: true,
+          animationDuration: const Duration(milliseconds: 300),
           position: currentIndex.toDouble(),
           decorator: DotsDecorator(
             size: const Size.square(9.0),
