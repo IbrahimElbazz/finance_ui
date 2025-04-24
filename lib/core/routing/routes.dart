@@ -10,4 +10,5 @@ class AppRoutes {
   static const String homeScreen = '/homeScreen';
   static const String myCardsScreen = '/myCardsScreen';
   static const String myProfileScreen = '/myProfileScreen';
+  static const String statisticScreen = '/statisticScreen';
 }

@@ -9,6 +9,7 @@ import 'package:finance_ui/feature/login/login_screen.dart';
 import 'package:finance_ui/feature/my_cards/my_cards_screen.dart';
 import 'package:finance_ui/feature/my_profile/my_profile_screen.dart';
 import 'package:finance_ui/feature/register/register_screen.dart';
+import 'package:finance_ui/feature/statistic/Statistic_screen.dart';
 import 'package:finance_ui/feature/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -76,6 +77,11 @@ class AppRouter {
         path: AppRoutes.myProfileScreen,
         name: AppRoutes.myProfileScreen,
         builder: (context, state) => const MyProfileScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.statisticScreen,
+        name: AppRoutes.statisticScreen,
+        builder: (context, state) => const StatisticScreen(),
       ),
     ],
   );

@@ -3,6 +3,7 @@ import 'package:finance_ui/core/styling/app_style.dart';
 import 'package:finance_ui/feature/home/home_screen.dart';
 import 'package:finance_ui/feature/my_cards/my_cards_screen.dart';
 import 'package:finance_ui/feature/my_profile/my_profile_screen.dart';
+import 'package:finance_ui/feature/statistic/Statistic_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +18,7 @@ class _AppNavigationState extends State<AppNavigation> {
   int currentIndex = 0;
   List screens = [
     HomeScreen(),
-    HomeScreen(),
+    StatisticScreen(),
     HomeScreen(),
     MyCardsScreen(),
     MyProfileScreen(),
