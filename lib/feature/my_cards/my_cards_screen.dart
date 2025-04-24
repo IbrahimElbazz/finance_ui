@@ -32,6 +32,20 @@ class MyCardsScreen extends StatelessWidget {
       ),
     ];
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.white,
+        surfaceTintColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'All Cards',
+          style: TextStyle(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w600,
+            color: AppColors.black,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

@@ -7,6 +7,7 @@ import 'package:finance_ui/feature/forgot%20password/password_changed_screen.dar
 import 'package:finance_ui/feature/home/home_screen.dart';
 import 'package:finance_ui/feature/login/login_screen.dart';
 import 'package:finance_ui/feature/my_cards/my_cards_screen.dart';
+import 'package:finance_ui/feature/my_profile/my_profile_screen.dart';
 import 'package:finance_ui/feature/register/register_screen.dart';
 import 'package:finance_ui/feature/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -70,6 +71,11 @@ class AppRouter {
         path: AppRoutes.myCardsScreen,
         name: AppRoutes.myCardsScreen,
         builder: (context, state) => const MyCardsScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.myProfileScreen,
+        name: AppRoutes.myProfileScreen,
+        builder: (context, state) => const MyProfileScreen(),
       ),
     ],
   );
