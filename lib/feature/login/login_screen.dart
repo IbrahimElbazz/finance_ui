@@ -76,7 +76,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Gap(30),
               CustomButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(AppRoutes.appNavigation);
+                },
                 color: AppColors.primary,
                 child: Text('Login', style: AppStyle.whiteW600S15),
               ),

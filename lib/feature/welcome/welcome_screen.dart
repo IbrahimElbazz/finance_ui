@@ -23,14 +23,16 @@ class WelcomeScreen extends StatelessWidget {
 
             CustomButton(
               onPressed: () {
-                context.pushNamed(AppRoutes.appNavigation);
+                context.pushNamed(AppRoutes.loginScreen);
               },
               color: AppColors.primary,
               child: Text('Login', style: AppStyle.whiteW600S15),
             ),
             SizedBox(height: 10.h),
             CustomOutlineButton(
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(AppRoutes.registerScreen);
+              },
               color: AppColors.primary,
               child: Text(
                 'Register',
@@ -38,15 +40,20 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50.h),
-            Text(
-              'Continue as a guest',
-              style: TextStyle(
-                fontSize: 15.sp,
-                color: AppColors.primaryDark,
-                fontWeight: FontWeight.w700,
-                decoration: TextDecoration.underline,
-                decorationColor: AppColors.primaryDark,
-                decorationThickness: 2,
+            TextButton(
+              onPressed: () {
+                context.pushNamed(AppRoutes.appNavigation);
+              },
+              child: Text(
+                'Continue as a guest',
+                style: TextStyle(
+                  fontSize: 15.sp,
+                  color: AppColors.primaryDark,
+                  fontWeight: FontWeight.w700,
+                  decoration: TextDecoration.underline,
+                  decorationColor: AppColors.primaryDark,
+                  decorationThickness: 2,
+                ),
               ),
             ),
           ],

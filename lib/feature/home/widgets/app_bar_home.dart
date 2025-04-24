@@ -25,7 +25,7 @@ class AppBarHome extends StatelessWidget {
                 style: AppStyle.greyW500S16.copyWith(fontSize: 12.sp),
               ),
               Text(
-                'Abdallah Yassein',
+                'Bzookaaaaaaaaa',
 
                 style: AppStyle.darkGreyW600S14.copyWith(
                   fontSize: 18.sp,
